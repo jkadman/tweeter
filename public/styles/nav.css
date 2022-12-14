@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 120px;
+  width: auto;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  
+
+}
+
+nav > span {
+  font-family: 'Bungee', cursive;
+  font-size: 32px;
+  padding: 1.5em;
+}
+
+nav.div {
+  position: absolute;
+  flex-grow: 3;
+  /* top | right | bottom | left */
+  /* margin: 30px; */
+  /* padding: 7em; */
+}
+
+.new-test {
+  margin: 2em 1.5em 0em -3em
+}
+
+.fa-solid-fa-angles-down {
+  position: relative;
+  /* margin: 1em 1em 0em 0em */
+
+}

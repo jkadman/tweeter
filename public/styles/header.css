@@ -1,0 +1,35 @@
+header {
+  
+  display: flex;
+  /* position: relative; */
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 120px;
+  height: 520px;
+  background-color: #520066;
+  background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
+
+  
+  
+}
+
+.container {
+  align-self: center;
+
+}
+
+.image { 
+  align-self: center;
+  position: absolute;
+ }
+
+.name {
+  /* align-self: center; */
+  /* height: 100px; */
+  /* top | right | bottom | left */
+  margin: 250px 0px 0px 50px;
+
+  position: relative;
+ }
+
