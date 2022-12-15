@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" /> 
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -42,7 +43,7 @@
           <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header>
+    <header class="main">
       <div class="container">
         <div class="image">
             <img src="/images/profile-hex.png"> 
@@ -67,14 +68,30 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <container>
-          <div>somebody</div>
-          a bunch of stuff
-          <footer>some date</footer>
+        <container id="input-text">
+          <article>
+            <header>
+              <div>
+                <h4><i class="fa-solid fa-user"></i>
+                somebody </h4>
+              </div> 
+              <h5>@soandso</h5>
+            </header>
+              <h4>a bunch of stuff</h4>
+            <footer>
+              some date
+              <container class="link-tags">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+            </container>
+            </footer>
+          </article>
         </container>
       </section>
     </main>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-container.js"></script>
   </body>
 </html>

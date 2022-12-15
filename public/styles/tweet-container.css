@@ -1,0 +1,60 @@
+#input-text {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 250px
+}
+
+#input-text:hover {
+  box-shadow: 5px 10px #808080;
+}
+
+#input-text article {
+  padding: .5em;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article header h5 {
+  opacity: 0.5
+}
+
+#input-text footer {
+  padding: .5em;
+  border-top: 5px solid;
+  width: 99%;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+article footer container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link-tags {
+  margin-top: -20px;
+}
+
+.fa-flag {
+  margin-right: 5px;
+}
+
+.fa-heart {
+  margin-left: 5px
+}
+
+.fa-flag:hover {
+  color: yellowgreen;
+}
+.fa-retweet:hover {
+  color: yellowgreen;
+}
+.fa-heart:hover {
+  color:yellowgreen;
+}

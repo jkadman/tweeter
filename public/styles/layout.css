@@ -29,7 +29,12 @@ body {
   width: 90%;
    /* top | right | bottom | left */ 
    margin: 0em 0em 0em 10em;
+   border: 2px hidden;
+   width: 50%;
+   height: 100px;
 }
+
+
 
 
 /*

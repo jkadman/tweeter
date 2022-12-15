@@ -1,4 +1,4 @@
-header {
+.main {
   
   display: flex;
   /* position: relative; */
@@ -9,19 +9,16 @@ header {
   height: 520px;
   background-color: #520066;
   background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
-
-  
-  
 }
 
 .container {
   align-self: center;
-
 }
 
 .image { 
   align-self: center;
   position: absolute;
+  background-attachment: local;
  }
 
 .name {

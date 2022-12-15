@@ -22,9 +22,6 @@ nav > span {
 nav.div {
   position: absolute;
   flex-grow: 3;
-  /* top | right | bottom | left */
-  /* margin: 30px; */
-  /* padding: 7em; */
 }
 
 .new-test {
@@ -33,6 +30,4 @@ nav.div {
 
 .fa-solid-fa-angles-down {
   position: relative;
-  /* margin: 1em 1em 0em 0em */
-
 }
