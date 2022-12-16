@@ -14,8 +14,6 @@ $(document).ready(function() {
   $('#tweet-text').on('input', function () {
     let count = $(this).val().length;
     let totalLength = 140 - count;
-    console.log(count)
-    console.log(totalLength)
     $('.counter').text(totalLength)
     
     if (totalLength < 0) {

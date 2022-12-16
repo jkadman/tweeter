@@ -24,11 +24,16 @@ article header h5 {
   opacity: 0.5
 }
 
+h4 {
+  margin-top: 10px;
+}
+
 #input-text footer {
   padding: .5em;
   border-top: 5px solid;
   width: 99%;
   margin-left: 5px;
+  margin-bottom: 50px;
   font-size: 16px;
 }
 
