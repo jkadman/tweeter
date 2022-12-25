@@ -1,0 +1,20 @@
+/* br {
+  display: none;
+} */
+
+#no-text {
+  color: red;
+  border-style: solid;
+  padding: 3px;
+  padding-right: 100px;
+  display:none;
+}
+
+#too-long {
+  white-space: pre;
+  color: red;
+  border-style: solid;
+  padding: 3px;
+  padding-right: 100px;
+  display: none;
+}
