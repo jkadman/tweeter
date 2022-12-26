@@ -11,6 +11,7 @@ $(document).ready(function() {
 // console.log(tweeter2)
 
 
+
   $('#tweet-text').on('input', function () {
     let count = $(this).val().length;
     let totalLength = 140 - count;
@@ -21,8 +22,7 @@ $(document).ready(function() {
     } else {
       $('.counter').css("color", "#545149")
     }
-
+    
   })
-
 });
 
