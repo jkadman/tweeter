@@ -58,24 +58,20 @@ $(document).ready(function () {
       return;
     } else if (data.length > 140) {
       $('#too-long').slideDown('slow');
+      $('#tweet-text').val('');
       return;
     } 
     $.post("/tweets", data)
-
+    
+    // $textarea.parent().find('.counter').text('140');
     $('#too-long').slideUp();
     $('#no-text').slideUp();
-
-
-    // if ($('#too-long').slideDown()) {
-    //   $('#too-long').slideToggle();
-    //   return;
-    // } else {
-    //   $('#no-text').slideToggle();
-    //   return;
-    // } 
-
+    
+    $('#tweet-text').val('');
+    $('.counter').css('counter-reset', '.counter')
     console.log('tweet posted')
     loadTweets();
+    
   })
 
 
@@ -99,8 +95,9 @@ $(document).ready(function () {
 
 // Tweeter issues to work on :
 // text box starts at 5, ie 5 === 0
-// tweets appear at the bottom not the top
-// make image in page go behind header on scroll
-// remove text from text area
+// tweets appear at the bottom not the top -- part of project base code
+// make image in page go behind header on scroll - fixed
+// remove text from text area when there are too many characters
 // reset counter
-// posts every tweet again, just want the new one
+// posts every tweet again, just want the new one -- part of project base code I think
+// sometimes the tweet button doesn't work and tweets don't load
