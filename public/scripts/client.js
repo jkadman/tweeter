@@ -7,7 +7,6 @@
 
 
 $(document).ready(function () {
-  // const db = require('tweeter/server/lib/in-memory-db')
 
   // function to make sure only no malicious code can be transmitted through a tweet
   const escape = function (str) {
@@ -42,15 +41,12 @@ $(document).ready(function () {
     return htmlData;
   }
 
-    // either change newTweet name or newTweets below
   // pushes each tweet through the tweet formatting
-  // want to prepend the posts to each other, not the tweet-container
   const renderTweets = function (array) {
-    // let newTweet;
     $('#tweet-section').empty();
     for (let item of array) {
-      const newTweet = createTweetElement(item);
-      $('#tweet-section').prepend(newTweet);
+      const formatTweet = createTweetElement(item);
+      $('#tweet-section').prepend(formatTweet);
     }
   }
 
@@ -73,7 +69,6 @@ $(document).ready(function () {
     }
 
     // when to call error messages
-    // $('#tweet-text').val('')
     if (tweetInput.val() === '') {
       $('#too-long').slideUp('slow');
       $('#no-text').slideDown('slow');
@@ -81,37 +76,23 @@ $(document).ready(function () {
     } else if (tweetInput.val().length > 140) {
       $('#no-text').slideUp();
       $('#too-long').slideDown('slow');
-      // $('#tweet-text').val('');
-      // counterReset();
       return;
     } 
+
     const data = $(this).serialize();
+
+    // post tweet then remove error and reset counter
     $.post("/tweets", data)
       .then(() => {
         console.log('post completed')
-        
-        // remove error message
         $('#too-long').slideUp();
         $('#no-text').slideUp();
-    
         $('#tweet-text').val('');
         counterReset();
         console.log('tweet posted')
         loadTweets();
       })
   })
-
-  // either change newTweets name or newTweet above
-  // loads tweets when called
-  // const loadTweets = function () {
-  //   const jsonTweet = '/tweets';
-  //   $.ajax(jsonTweet, { method: 'GET' })
-  //     .then(function (newTweets) {
-  //       console.log('Success: ', newTweets);
-  //       renderTweets(newTweets);
-
-  //     });
-  // }
 
   const loadTweets = function () {
     $.get('/tweets')
@@ -122,8 +103,6 @@ $(document).ready(function () {
   }
 
   loadTweets();
-
-
 
 });
 
