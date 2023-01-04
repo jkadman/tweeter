@@ -57,9 +57,11 @@ $(document).ready(function () {
   // Event listener for form submission
   const tweetSub = $("form").submit(function (event) {
     event.preventDefault();
-    const tweetInput = $('textarea');
+    const tweetInput = $('#tweet-text');
     console.log('tweetInput:', tweetInput)
     console.log('tweetInputLength:', tweetInput.length)
+    console.log('tweetInputValue:', tweetInput.val())
+    
 
     // function to reset the counter to the correct number and color in all cases
     const counterReset = function() {
@@ -72,11 +74,11 @@ $(document).ready(function () {
 
     // when to call error messages
     // $('#tweet-text').val('')
-    if (tweetInput.length === 1) {
+    if (tweetInput.val() === '') {
       $('#too-long').slideUp('slow');
       $('#no-text').slideDown('slow');
       return;
-    } else if (tweetInput.length > 140) {
+    } else if (tweetInput.val().length > 140) {
       $('#no-text').slideUp();
       $('#too-long').slideDown('slow');
       // $('#tweet-text').val('');
@@ -127,9 +129,10 @@ $(document).ready(function () {
 
 
 // NEED TO FIX
-// textarea contains text= and shows an input of 5
+
 // make sure the css styles correspond to the requirements of the project
 // either change background color or change 'your name' color -- see requirements to decide
+// on enter, tweeter should submit
 
 // FIXED
 // make image in page go behind header on scroll - fixed
@@ -141,6 +144,7 @@ $(document).ready(function () {
 // tweets appear at the bottom not the top
 // if I refresh the page, all tweets but the new one are gone
 // at seemingly random points instead of a new tweet posting, the tweet will repeat or not post at all
+// textarea contains length of 1
 
 /*
 pseudo code for render issue
