@@ -46,22 +46,20 @@ $(document).ready(function () {
   // pushes each tweet through the tweet formatting
   // want to prepend the posts to each other, not the tweet-container
   const renderTweets = function (array) {
-    let newTweet;
+    // let newTweet;
+    $('#tweet-section').empty();
     for (let item of array) {
-      newTweet = createTweetElement(item);
+      const newTweet = createTweetElement(item);
+      $('#tweet-section').prepend(newTweet);
     }
-    
-    $('#tweet-section').prepend(newTweet);
-
   }
 
   // Event listener for form submission
   const tweetSub = $("form").submit(function (event) {
     event.preventDefault();
-    const data = $(this).serialize();
-    console.log('data:', data)
-    console.log($(this))
-    console.log(data.length)
+    const tweetInput = $('textarea');
+    console.log('tweetInput:', tweetInput)
+    console.log('tweetInputLength:', tweetInput.length)
 
     // function to reset the counter to the correct number and color in all cases
     const counterReset = function() {
@@ -74,44 +72,54 @@ $(document).ready(function () {
 
     // when to call error messages
     // $('#tweet-text').val('')
-    if (data.length === 5) {
+    if (tweetInput.length === 1) {
       $('#too-long').slideUp('slow');
       $('#no-text').slideDown('slow');
       return;
-    } else if (data.length > 140) {
+    } else if (tweetInput.length > 140) {
       $('#no-text').slideUp();
       $('#too-long').slideDown('slow');
       // $('#tweet-text').val('');
       // counterReset();
       return;
     } 
-    
+    const data = $(this).serialize();
     $.post("/tweets", data)
+      .then(() => {
+        console.log('post completed')
+        
+        // remove error message
+        $('#too-long').slideUp();
+        $('#no-text').slideUp();
     
-    // remove error message
-    $('#too-long').slideUp();
-    $('#no-text').slideUp();
-
-    $('#tweet-text').val('');
-    counterReset();
-    console.log('tweet posted')
-    loadTweets();
-    
+        $('#tweet-text').val('');
+        counterReset();
+        console.log('tweet posted')
+        loadTweets();
+      })
   })
 
   // either change newTweets name or newTweet above
   // loads tweets when called
+  // const loadTweets = function () {
+  //   const jsonTweet = '/tweets';
+  //   $.ajax(jsonTweet, { method: 'GET' })
+  //     .then(function (newTweets) {
+  //       console.log('Success: ', newTweets);
+  //       renderTweets(newTweets);
+
+  //     });
+  // }
+
   const loadTweets = function () {
-    const jsonTweet = '/tweets';
-    $.ajax(jsonTweet, { method: 'GET' })
-      .then(function (newTweets) {
-        console.log('Success: ', newTweets);
-        renderTweets(newTweets);
+    $.get('/tweets')
+      .then((tweetData) => {
+        console.log('data:', tweetData)
+        renderTweets(tweetData);
       });
-      
   }
 
-  // loadTweets();
+  loadTweets();
 
 
 
@@ -120,11 +128,7 @@ $(document).ready(function () {
 
 // NEED TO FIX
 // textarea contains text= and shows an input of 5
- 
-// if I refresh the page, all tweets but the new one are gone
 // make sure the css styles correspond to the requirements of the project
-// at seemingly random points instead of a new tweet posting, the tweet will repeat
-
 // either change background color or change 'your name' color -- see requirements to decide
 
 // FIXED
@@ -135,6 +139,8 @@ $(document).ready(function () {
 // error messages disappear when errors are done back to back
 // posts every tweet again, just want the new one 
 // tweets appear at the bottom not the top
+// if I refresh the page, all tweets but the new one are gone
+// at seemingly random points instead of a new tweet posting, the tweet will repeat or not post at all
 
 /*
 pseudo code for render issue
