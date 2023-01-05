@@ -32,3 +32,11 @@ nav.div {
 .fa-solid-fa-angles-down {
   position: relative;
 }
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: #520066;
+    background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
+    /* z-index: 0; */
+  }
+}
