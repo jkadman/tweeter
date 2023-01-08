@@ -3,8 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const db = require('./server/lib/in-memory-db')
-
 
 $(document).ready(function () {
 
@@ -62,7 +60,6 @@ $(document).ready(function () {
     // function to reset the counter to the correct number and color in all cases
     const counterReset = function() {
       const counter = document.querySelector('.counter')
-      // const counter = $('.counter')
       let i = 140;
       counter.innerHTML = i;
       $(counter).css('color', '#545149');
@@ -105,32 +102,3 @@ $(document).ready(function () {
   loadTweets();
 
 });
-
-
-// NEED TO FIX
-
-// make sure the css styles correspond to the requirements of the project
-// either change background color or change 'your name' color -- see requirements to decide
-// on enter, tweeter should submit
-
-// FIXED
-// make image in page go behind header on scroll - fixed
-// remove text from text area when there are too many characters - fixed
-// reset counter - fixed
-// post a tweet after too many characters are entered
-// error messages disappear when errors are done back to back
-// posts every tweet again, just want the new one 
-// tweets appear at the bottom not the top
-// if I refresh the page, all tweets but the new one are gone
-// at seemingly random points instead of a new tweet posting, the tweet will repeat or not post at all
-// textarea contains length of 1
-
-/*
-pseudo code for render issue
-  with no info in the db the first post shows an error
-  then the posts are place in the db
-  when I post again, if it posts, it will post the previous tweet plus the new one
-  Then I reload the page and the repeated tweets are gone, and only the ones from the database remain
-
-  So it is posting what is in the database each time, instead of posting just my new tweet
-*/

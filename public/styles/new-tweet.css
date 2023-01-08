@@ -1,6 +1,5 @@
 .new-tweet {
   display: flex;
-  /* flex-direction: column; */
   margin-top: 4em;
 }
 
@@ -10,12 +9,9 @@
 } 
 
 hr {
-  /* margin-right: auto; */
   border-color: black;
   border-width: 2px;
-  /* width: 100%; */
 }
-
 
 textarea {
   resize: none;

@@ -30,12 +30,7 @@ html {
    margin-left: 10em;
    border: 2px hidden;
    background-color: #f4f1ec;
-   /* box-sizing: border-box; */
-   /* width: 100%; */
 }
-
-
-
 
 @media only screen and (max-width: 1600px) {
   .wrapper {
@@ -48,13 +43,9 @@ html {
   .tweet-container {
     margin-left: 0em;
     padding: 0 2em;
-    /* width: 100%; */
   }
 
-  
-
   #tweet-section {
-    /* width: 100%; */
     overflow-wrap: break-word;
   }
 
@@ -63,15 +54,10 @@ html {
     overflow: hidden;
   }
 
-  
-
- 
-
   nav {
     background-color: blueviolet !important;
     background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
   }
-
 
   .main {
     display: block;
