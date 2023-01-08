@@ -16,3 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Project Images
+![Tweeter1](images/tweeter1.png)
+![Tweeter1](images/tweeter2.png)
