@@ -1,10 +1,12 @@
+
 #input-text {
   display: flex;
   flex-direction: column;
   border: 5px solid;
   margin-top: 50px;
   margin-bottom: 50px;
-  height: 250px
+  height: 250px;
+
 }
 
 #input-text:hover {
@@ -63,3 +65,5 @@ article footer container {
 .fa-heart:hover {
   color:yellowgreen;
 }
+
+

@@ -1,32 +1,27 @@
 .main {
-  
   display: flex;
-  /* position: relative; */
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  padding: 120px;
+  justify-content: center;
   height: 520px;
-  background-color: #520066;
+  background-color: blueviolet;
   background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
+  width: 40%;
+  margin-top: 5em;
 }
 
 .container {
-  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  
 }
 
 .image { 
-  align-self: center;
-  position: absolute;
   background-attachment: local;
  }
 
-.name {
-  /* align-self: center; */
-  /* height: 100px; */
-  /* top | right | bottom | left */
-  margin: 250px 0px 0px 50px;
 
-  position: relative;
- }
 
+ 

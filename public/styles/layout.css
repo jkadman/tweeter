@@ -14,29 +14,72 @@ html {
  * Global layout stuff
  */
 
-body {
+.wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  height: auto;
+  margin-top: 5em;
+  padding: 0 2em
 }
 
 .tweet-container {
-  align-self: center;
-  background-color: #f4f1ec;  
-  width: 90%;
-   /* top | right | bottom | left */ 
-   margin: 0em 0em 0em 10em;
+   margin-left: 10em;
    border: 2px hidden;
-   width: 50%;
-   height: 100px;
+   background-color: #f4f1ec;
+   /* box-sizing: border-box; */
+   /* width: 100%; */
 }
 
 
 
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+@media only screen and (max-width: 1600px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .tweet-container {
+    margin-left: 0em;
+    padding: 0 2em;
+    /* width: 100%; */
+  }
+
+  
+
+  #tweet-section {
+    /* width: 100%; */
+    overflow-wrap: break-word;
+  }
+
+  .tweet-post {
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  
+
+ 
+
+  nav {
+    background-color: blueviolet !important;
+    background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
+  }
+
+
+  .main {
+    display: block;
+    margin-top: 0;
+    width: 100% !important;
+  }
+}
+
+
+
+

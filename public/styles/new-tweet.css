@@ -1,40 +1,30 @@
 .new-tweet {
   display: flex;
   /* flex-direction: column; */
-  /* border-style: solid; */
-  /* justify-content: left; */
-  /* text-align: center; */
-  flex-direction: column;
-  
+  margin-top: 4em;
 }
 
-.new-tweet div {
+ .new-tweet div {
   display: flex;
   justify-content: space-between;
-  /* border-top: 5px solid black;
-  border-spacing: 20px; */
-  /* top | right | bottom | left */
-  /* margin: 1.5em 0em 1.5em 0em; */
-  /* padding-top: 1.5em; */
-}
+} 
 
 hr {
-  margin-right: auto;
+  /* margin-right: auto; */
   border-color: black;
   border-width: 2px;
-  /* padding: 5px */
+  /* width: 100%; */
 }
 
-#tweet-text {
+
+textarea {
   resize: none;
-  height: 30px;
-  width: 800px;
+  height: 30px;  
+  width: 50vw;
   background-color: #f4f1ec;
   border-style: none; 
   border-color: Transparent; 
   overflow: hidden;   
-  /* margin: 1.5em 0em 1.5em 0em */
-  /* padding-bottom : 1.5em; */
 }
 
 button {
@@ -46,6 +36,4 @@ button {
 .counter {
   align-self: flex-end;
   font-weight: bold;
-  /* padding-top: 1.5em */
-
 }
