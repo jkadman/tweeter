@@ -38,21 +38,31 @@ body {
    background-color: #f4f1ec;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1024px) {
   
   .wrapper {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+    margin-top: -120px;
     padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: blueviolet;
-    background-image: url("https://www.transparenttextures.com/patterns/green-cup.png");
+  }
+
+  .container {
+    margin-top: 100px;
   }
 
   .tweet-container {
     margin-left: 0em;
     padding: 0 2em;
+    margin: auto;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  #tweet-text {
+    min-width: 30em;
   }
 
   #tweet-section {
@@ -73,7 +83,6 @@ body {
     width: 100% 
   }
 }
-
 
 
 
