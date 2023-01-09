@@ -52,10 +52,6 @@ $(document).ready(function () {
   const tweetSub = $("form").submit(function (event) {
     event.preventDefault();
     const tweetInput = $('#tweet-text');
-    console.log('tweetInput:', tweetInput)
-    console.log('tweetInputLength:', tweetInput.length)
-    console.log('tweetInputValue:', tweetInput.val())
-    
 
     // function to reset the counter to the correct number and color in all cases
     const counterReset = function() {
@@ -81,12 +77,10 @@ $(document).ready(function () {
     // post tweet then remove error and reset counter
     $.post("/tweets", data)
       .then(() => {
-        console.log('post completed')
         $('#too-long').slideUp();
         $('#no-text').slideUp();
         $('#tweet-text').val('');
         counterReset();
-        console.log('tweet posted')
         loadTweets();
       })
   })
@@ -94,7 +88,6 @@ $(document).ready(function () {
   const loadTweets = function () {
     $.get('/tweets')
       .then((tweetData) => {
-        console.log('data:', tweetData)
         renderTweets(tweetData);
       });
   }
