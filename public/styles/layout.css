@@ -64,8 +64,8 @@ body {
     overflow: hidden;
   }
 
-  nav {
-    background-color: transparent !important;
+  #navbar {
+    background-color: transparent;
   }
 
  #head {
