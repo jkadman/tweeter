@@ -21,6 +21,7 @@ nav > span {
 #write-tweet {
   /* top right bottom left */
   margin: 3em 1.5em 0em -3em;  
+  position: relative;
 }
 
 #angles {
