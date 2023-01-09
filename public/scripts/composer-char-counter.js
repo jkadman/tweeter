@@ -2,16 +2,6 @@
 
 $(document).ready(function() {
 
-  // tweeter = document.getElementsByTagName('textarea')
-// console.log(tweeter)
-// const textarea = document.getElementsByTagName('textarea')
-// console.log(tweeter)
-
-  // const textarea = document.querySelector('textarea')
-// console.log(tweeter2)
-
-
-
   $('#tweet-text').on('input', function () {
     let count = $(this).val().length;
     let totalLength = 140 - count;
